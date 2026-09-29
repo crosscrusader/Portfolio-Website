@@ -304,3 +304,38 @@ footer .wrap {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+/* Section headings on the homepage */
+.section-title {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 24px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tile-grid + .section-title { margin-top: 0; }
+
+/* Tiles that don't have an image yet */
+.tile-placeholder {
+  background: repeating-linear-gradient(45deg, #e9e6df, #e9e6df 12px, #efece6 12px, #efece6 24px);
+}
+
+.tile-placeholder .tile-caption {
+  background: none;
+  color: var(--ink);
+  opacity: 1;
+  transform: none;
+}
+
+.gallery-placeholder {
+  border: 1px dashed var(--line);
+  background: #f3f1ec;
+  color: var(--muted);
+  text-align: center;
+  padding: 90px 20px;
+  font-size: 15px;
+}
