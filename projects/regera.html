@@ -23,18 +23,47 @@
     <div class="eyebrow">Mechanical Engineering · Project 01</div>
     <h1>Regera Model and Simulation</h1>
     <div class="meta-row">
-      <div><span>Course</span>TBD</div>
-      <div><span>Year</span>TBD</div>
+      <div><span>Year</span>Fall 2025</div>
+      <div><span>Software</span>Siemens NX</div>
+      <div><span>Team</span>Izrahiah Immanuel, Parth Patel, Jonathan Vollrath</div>
     </div>
-    <p class="project-desc">Project description coming soon.</p>
+    <p class="project-desc">A parametric CAD model and simulation study of the Koenigsegg Regera, a limited-production hybrid grand tourer built from 2015 to 2022 with only 80 units made. The Regera pairs a twin-turbo V8 with an 800-volt electric system for 1,500 horsepower, and is built around a carbon fiber monocoque with an aluminum honeycomb core. Working as a team of three in Siemens NX, we built a surface model of the car and its key parts, animated its doors and compartments, and ran three simulations on the model: a CFD study of the whole car, a windshield impact study, and a deflection study of the rear deck wing.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Modeling the Car</h2>
+    <p>With no factory CAD data available, we built the model from reference images and videos. We imported raster images of the car into NX, scaled them correctly to one another, and lined them up at the datum of the main assembly file so every part was modeled in the same space. We put the most detail into the parts that matter for aerodynamics and simplified parts that were not used in the simulations.</p>
+    <p>The body is a full surface model. We drew modeling curves over the reference images, then built surfaces from them: Through Curves (lofting) for the sweeping panels, Through Curve Mesh for complex, doubly curved areas, and Fill Surface, Ruled Surface, and Studio Surface for aesthetic transitions. Curves on surface defined panel lines and openings, and the finished surfaces were sewn together and thickened into solid bodies. The doors and rear end were modeled the same way as separate parts.</p>
+    <p>The wheels follow the Regera&rsquo;s staggered setup, with 19-inch wheels and 255/35 tires in front and 20-inch wheels and 335/30 tires in the rear. They were solid modeled using splines and edge blends. The mirrors were shaped with Fill Surface and control point offsets. All the parts were then brought together in the full model assembly.</p>
+    <p>Finally, we animated the model to recreate the Regera&rsquo;s &ldquo;Autoskin&rdquo; hydraulics, which open all of its doors and compartments. The hood, rear deck, and doors use cylindrical joints relative to movable base axes, driven by polynomial drivers: the hood and rear rotate open, while the doors rotate and translate.</p>
+
+    <h2>Simulations</h2>
+    <p><strong>CFD.</strong> To find the drag coefficient of our model, which published sources put between 0.32 and 0.37, we placed the car in a virtual wind tunnel using symmetry conditions. The air was meshed with CTETRA10 elements and the carbon fiber and aluminum body with CQUAD8 elements at a 50 mm mesh size, with inlet and outlet velocities set to the car&rsquo;s 250 mph top speed. We learned that the solution works without complex Booleans, with a low iteration count, and with a flow-only solution instead of flow-thermal coupling.</p>
+    <p><strong>Windshield impact.</strong> This study analyzed the stress in the laminated glass windshield under a high-speed impact, using an aluminum 6061 impactor similar to the NHTSA standard and glass with a modulus of about 70 GPa and a Poisson&rsquo;s ratio of about 0.2. The results diverged at first and converged with finer meshes, which used edge control.</p>
+    <p><strong>Rear wing deflection.</strong> The Regera produces 992 lb (450 kg) of downforce at 155 mph. This linear static study looked at how much of that the rear deck wing carries and how far it deflects from its original shape, to check that the claimed downforce is feasible. The mesh converged quickly, within three refinements.</p>
   </div>
 
   <div class="project-gallery gallery-natural">
-    <img src="../images/projects/regera/01.png" alt="3D CAD model of the Regera, front three-quarter view">
-    <img src="../images/projects/regera/02.png" alt="Rendered side profile of the Regera model">
-    <img src="../images/projects/regera/03.png" alt="Rendered rear view showing the diffuser and rear wing">
-    <img src="../images/projects/regera/04.png" alt="Top view of the Regera model">
-    <img src="../images/projects/regera/05.png" alt="CFD airflow streamlines around the model, colored by velocity in mm/s">
+    <figure>
+      <img src="../images/projects/regera/01.png" alt="3D CAD model of the Regera, front three-quarter view">
+      <figcaption>Completed surface model, front three-quarter view</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/regera/02.png" alt="Rendered side profile of the Regera model">
+      <figcaption>Side profile of the full model assembly</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/regera/03.png" alt="Rendered rear view showing the diffuser and rear wing">
+      <figcaption>Rear end, showing the diffuser and rear deck wing</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/regera/04.png" alt="Top view of the Regera model">
+      <figcaption>Top view of the surface model</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/regera/05.png" alt="CFD airflow streamlines around the model, colored by velocity in mm/s">
+      <figcaption>CFD wind tunnel study at 250 mph, with streamlines colored by velocity (mm/s)</figcaption>
+    </figure>
   </div>
 
   <div class="project-nav">
