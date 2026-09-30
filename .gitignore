@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Full-resolution camera originals (web-sized copies are model-0N.jpg)
+images/projects/hastings-gantt/physical_models/4A2A*.jpg

@@ -258,7 +258,6 @@ header.site-header {
   height: auto;
   margin: 4px 0 26px;
   background: #fff;
-  border: 1px solid var(--line);
 }
 
 .project-desc {
@@ -304,7 +303,6 @@ header.site-header {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #fff;
-  border: 1px solid var(--line);
   cursor: zoom-in;
 }
 
@@ -367,6 +365,79 @@ header.site-header {
     aspect-ratio: 4 / 3;
   }
   .project-gallery figure:only-child { aspect-ratio: auto; }
+}
+
+/* Hero image above the description */
+.project-gallery.gallery-hero {
+  padding: 28px 0 0;
+}
+
+.project-header:has(+ .gallery-hero) {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.project-intro {
+  padding: 28px 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-intro + .project-gallery {
+  padding-top: 32px;
+}
+
+/* Section headings between galleries */
+.gallery-section {
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.gallery-section h2 {
+  margin: 20px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Even 2x2 quadrants: no featured tile */
+.project-gallery.gallery-quad {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0 48px;
+}
+
+.project-gallery.gallery-quad figure,
+.project-gallery.gallery-quad figure:first-child {
+  grid-column: auto;
+  grid-row: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Portrait photo on the left, two landscape photos stacked on the right */
+.project-gallery.gallery-models {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0 90px;
+}
+
+.project-gallery.gallery-models figure:first-child {
+  grid-column: auto;
+  grid-row: span 2;
+}
+
+.project-gallery.gallery-models figure {
+  aspect-ratio: 3 / 2;
+}
+
+.project-gallery.gallery-models figure:first-child {
+  aspect-ratio: auto;
+}
+
+@media (max-width: 700px) {
+  .project-gallery.gallery-quad figure,
+  .project-gallery.gallery-quad figure:first-child {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 /* Lightbox */
@@ -469,7 +540,6 @@ body.lb-lock { overflow: hidden; }
 .about-layout img {
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
 }
 
 .about-layout h1 {
