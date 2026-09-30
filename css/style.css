@@ -60,6 +60,15 @@ header.site-header {
   font-size: 13px;
 }
 
+@media (max-width: 700px) {
+  .nav { gap: 16px; }
+  .nav .logo .role {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+}
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -162,6 +171,12 @@ header.site-header {
   text-transform: uppercase;
 }
 
+.tile.tile-contain img {
+  object-fit: contain;
+  padding: 24px 24px 72px;
+  background: #fff;
+}
+
 .tile:hover img {
   transform: scale(1.06);
   filter: grayscale(0%);
@@ -255,6 +270,16 @@ header.site-header {
   display: block;
   border: 1px solid var(--line);
   background: #fff;
+}
+
+/* Small source images: show at natural size instead of stretching */
+.project-gallery.gallery-natural {
+  align-items: center;
+}
+
+.project-gallery.gallery-natural img {
+  width: auto;
+  max-width: 100%;
 }
 
 .project-nav {
