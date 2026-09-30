@@ -663,44 +663,54 @@ body.lb-lock { overflow: hidden; }
 
 .project-nav a:hover { color: var(--ink); }
 
-/* About page */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 56px;
-  padding: 64px 0 96px;
-  align-items: start;
-}
-
-@media (max-width: 800px) {
-  .about-layout { grid-template-columns: 1fr; }
-}
-
-.about-layout img {
-  width: 100%;
-  height: auto;
+/* About page: short sketch banner with the heading, text below */
+.about-banner {
+  position: relative;
+  margin-top: var(--gap);
+  height: clamp(220px, 30vw, 420px);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 clamp(20px, 4vw, 64px) clamp(20px, 3vw, 44px);
   border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff url("../images/misc/cover_photo.png") center 40% / cover no-repeat;
 }
 
-.about-layout h1 {
-  font-size: clamp(38px, 6vw, 88px);
+.about-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.about-banner h1 {
+  position: relative;
+  margin: 0;
+  font-size: clamp(44px, 8vw, 124px);
   font-weight: 500;
-  line-height: 0.95;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
-  margin: 0 0 28px;
+  color: #000;
 }
 
-.about-layout p {
-  font-size: 17px;
+.about-text {
+  padding: 40px 0 32px;
+}
+
+.about-text p {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.5;
   color: var(--soft);
-  margin: 0 0 18px;
+  margin: 0 0 22px;
 }
 
 .linkedin-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 12px;
   padding: 12px 22px;
   background: #fff;
   color: #000;
