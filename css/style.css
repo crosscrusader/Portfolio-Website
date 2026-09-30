@@ -252,6 +252,15 @@ header.site-header {
   margin-bottom: 3px;
 }
 
+.project-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 4px 0 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
 .project-desc {
   max-width: 720px;
   font-size: 16px;
