@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Izrahiah Immanuel — Architecture Portfolio</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -19,31 +19,56 @@
 </header>
 
 <main class="wrap">
-  <section class="hero">
-    <h1>Selected Work</h1>
-    <p>Mechanical engineer (Georgia Tech, High Honors) who pairs engineering rigor with a strong creative streak: a second degree in architecture, a fighting game built from scratch in Godot, and art commissions sold on the side. Designed and prototyped a shock absorber test rig at 15% of market cost and trained students on waterjets and manual mills as a prototyping instructor. Registered Engineer in Training (EIT).</p>
+  <section class="showcase" aria-label="Featured renders">
+    <figure class="slide is-active" data-title="Hastings Gantt Coastal Center" data-href="projects/hastings-gantt.html">
+      <img src="images/home/slide-hastings.jpg" alt="Aerial rendering of the Hastings Gantt Coastal Center" loading="eager">
+    </figure>
+    <figure class="slide" data-title="Frozen Palace" data-href="projects/frozen-palace.html">
+      <img src="images/home/slide-frozen-palace.jpg" alt="Rendering of the Frozen Palace brewery and spa" loading="lazy">
+    </figure>
+    <figure class="slide" data-title="Dance Hall" data-href="projects/dance-hall.html">
+      <img src="images/home/slide-dance-hall.jpg" alt="Interior rendering of the Dance Hall studio" loading="lazy">
+    </figure>
+    <figure class="slide" data-title="Momentum" data-href="projects/momentum.html">
+      <img src="images/home/slide-momentum.jpg" alt="Rendering of the Momentum apartment complex entrance" loading="lazy">
+    </figure>
+    <figure class="slide" data-title="Vertical Farm" data-href="projects/vertical-farm.html">
+      <img src="images/home/slide-vertical-farm.jpg" alt="Rendering of the Vertical Farm" loading="lazy">
+    </figure>
+    <div class="showcase-intro">
+      <h1>Selected Work</h1>
+      <p>Mechanical engineer (Georgia Tech, High Honors) who pairs engineering rigor with a strong creative streak: a second degree in architecture, a fighting game built from scratch in Godot, and art commissions sold on the side. Designed and prototyped a shock absorber test rig at 15% of market cost and trained students on waterjets and manual mills as a prototyping instructor. Registered Engineer in Training (EIT).</p>
+    </div>
+    <div class="showcase-bar">
+      <a class="slide-label" href="projects/hastings-gantt.html"><span>01 / 05</span><span class="slide-name">Hastings Gantt Coastal Center</span></a>
+      <div class="slide-dots">
+        <button type="button" aria-label="Show slide 1: Hastings Gantt Coastal Center"></button>
+        <button type="button" aria-label="Show slide 2: Frozen Palace"></button>
+        <button type="button" aria-label="Show slide 3: Dance Hall"></button>
+        <button type="button" aria-label="Show slide 4: Momentum"></button>
+        <button type="button" aria-label="Show slide 5: Vertical Farm"></button>
+      </div>
+    </div>
   </section>
 
   <section class="section-head">
     <h2>Mechanical Engineering</h2>
   </section>
 
-  <section class="tile-grid">
+  <section class="tile-grid tile-grid-2">
     <a class="tile tile-contain" href="projects/regera.html">
-      <img src="images/projects/regera/01.png" alt="Regera 3D model rendering">
+      <img src="images/projects/regera/01.png" alt="Regera 3D model rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">01</span>
         <div class="name">Regera Model and Simulation</div>
-        <div class="meta">Mechanical Engineering</div>
+        <div class="meta">Surface modeling and CFD · Fall 2025</div>
       </div>
     </a>
 
     <a class="tile tile-contain" href="projects/capstone.html">
-      <img src="images/projects/shock/01.png" alt="Capstone shock absorber test rig CAD model">
+      <img src="images/projects/shock/01.png" alt="Capstone shock absorber test rig CAD model" loading="lazy">
       <div class="tile-caption">
-        <span class="num">02</span>
         <div class="name">Capstone Project</div>
-        <div class="meta">Mechanical Engineering</div>
+        <div class="meta">Shock absorber test rig · Fusion 360</div>
       </div>
     </a>
   </section>
@@ -54,54 +79,48 @@
 
   <section class="tile-grid">
     <a class="tile" href="projects/vertical-farm.html">
-      <img src="images/projects/vertical-farm/02.png" alt="Vertical Farm project rendering">
+      <img src="images/projects/vertical-farm/02.png" alt="Vertical Farm project rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">01</span>
         <div class="name">Vertical Farm</div>
         <div class="meta">Arch 4015 · 2026</div>
       </div>
     </a>
 
     <a class="tile" href="projects/hastings-gantt.html">
-      <img src="images/projects/hastings-gantt/Aerial%20View%20-%20I.jpg" alt="Hastings Gantt Coastal Center aerial rendering">
+      <img src="images/projects/hastings-gantt/Aerial%20View%20-%20I.jpg" alt="Hastings Gantt Coastal Center aerial rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">02</span>
         <div class="name">Hastings Gantt Coastal Center</div>
         <div class="meta">Arch 4015 · 2024</div>
       </div>
     </a>
 
     <a class="tile" href="projects/momentum.html">
-      <img src="images/projects/momentum/01.png" alt="Momentum apartment complex rendering">
+      <img src="images/projects/momentum/01.png" alt="Momentum apartment complex rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">03</span>
         <div class="name">Momentum</div>
         <div class="meta">Arch 3017 · 2024</div>
       </div>
     </a>
 
     <a class="tile" href="projects/frozen-palace.html">
-      <img src="images/projects/frozen-palace/01.png" alt="Frozen Palace brewery and spa rendering">
+      <img src="images/projects/frozen-palace/rendering/portfolio%20render.png" alt="Frozen Palace brewery and spa rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">04</span>
         <div class="name">Frozen Palace</div>
         <div class="meta">Arch 3016 · 2023</div>
       </div>
     </a>
 
     <a class="tile" href="projects/honeycomb.html">
-      <img src="images/projects/honeycomb/01.png" alt="Honeycomb bus stop rendering">
+      <img src="images/projects/honeycomb/Izrahiah%20Immanuel%20Portfolio%20Fall%202024%20Image%5B24%5D.jpg" alt="Built Honeycomb bus stop on Ferst Drive" loading="lazy">
       <div class="tile-caption">
-        <span class="num">05</span>
         <div class="name">Honeycomb Bus Stop</div>
         <div class="meta">Arch 2111 · 2023</div>
       </div>
     </a>
 
     <a class="tile" href="projects/dance-hall.html">
-      <img src="images/projects/dance-hall/02.png" alt="Dance Hall rendering">
+      <img src="images/projects/dance-hall/rendering/interior_studio.jpg" alt="Dance Hall interior studio rendering" loading="lazy">
       <div class="tile-caption">
-        <span class="num">06</span>
         <div class="name">Dance Hall</div>
         <div class="meta">Arch 3016 · 2023</div>
       </div>
@@ -116,5 +135,6 @@
   </div>
 </footer>
 
+<script src="js/slideshow.js?v=2"></script>
 </body>
 </html>
