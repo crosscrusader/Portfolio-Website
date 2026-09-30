@@ -99,6 +99,22 @@ header.site-header {
   margin: 0;
 }
 
+/* Section headings */
+.section-head {
+  padding: 8px 0 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 /* Tile grid */
 .tile-grid {
   display: grid;
@@ -130,6 +146,20 @@ header.site-header {
   display: block;
   transition: transform 0.5s ease, filter 0.5s ease;
   filter: grayscale(15%);
+}
+
+.tile .tile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+  background: #e8e5de;
+  color: #948f85;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tile:hover img {
