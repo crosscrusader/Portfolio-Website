@@ -485,6 +485,16 @@ header.site-header {
 }
 
 /* Hero image above the description */
+/* Portrait image in the hero: cap its height and center it */
+.project-gallery.gallery-hero figure.portrait img {
+  max-height: 85vh;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+}
+
 .project-gallery.gallery-hero {
   padding: 24px 0 0;
 }
