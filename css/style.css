@@ -359,6 +359,8 @@ header.site-header {
   background: #fff;
 }
 
+.project-video.project-video-dark { background: #000; }
+
 /* Description text runs the full width of the page */
 .project-desc {
   font-size: clamp(18px, 1.6vw, 24px);
